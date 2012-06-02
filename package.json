@@ -1,0 +1,38 @@
+{
+	"name": "pygmentize",
+	"description": "Syntax highlighting with pygmentize.",
+	"version": "0.1.0",
+	"homepage": "https://github.com/rdworth/node-pygmentize",
+	"author": {
+		"name": "Richard D. Worth",
+		"email": "rdworth@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/rdworth/node-pygmentize.git"
+	},
+	"bugs": {
+		"url": "https://github.com/rdworth/node-pygmentize/issues"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/rdworth/node-pygmentize/blob/master/LICENSE-MIT"
+		}
+	],
+	"main": "lib/pygmentize",
+	"engines": {
+		"node": "~0.6.15"
+	},
+	"scripts": {
+		"test": "grunt test"
+	},
+	"dependencies": {
+		"async": "latest",
+		"jsdom": "latest"
+	},
+	"devDependencies": {
+		"grunt": "~0.3.9"
+	},
+	"keywords": [ "syntax", "highlight", "pygments" ]
+}
