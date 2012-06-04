@@ -32,10 +32,18 @@ exports[ "file" ] = {
 	},
 	"default": function( test ) {
 		test.expect( 1 );
-		pygmentize.file( "<pre><code></code></pre>", function( err, data ) {
-			test.equal( data, "<div class=\"highlight\"><pre>\n</pre></div>" );
-			test.done();
-		});
+		pygmentize.file( '' +
+			'<pre><code></code></pre>',
+			function( err, data ) {
+				test.equal( data, '' +
+					'<div class="highlightblock">' +
+						'<div class=\"highlight\">' +
+							'<pre>\n' +
+							'</pre>' +
+						'</div>\n' +
+					'</div>' );
+				test.done();
+			});
 	},
 	"data-linenum": function( test ) {
 		test.expect( 1 );
