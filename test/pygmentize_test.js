@@ -39,57 +39,57 @@ exports[ "file" ] = {
 	},
 	"linenos=true": function( test ) {
 		test.expect( 1 );
-		pygmentize.file( ''
-			+ '<pre><code data-linenos=true>var\n'
-			+ 'var\n'
-			+ '</code></pre>',
+		pygmentize.file( '' +
+			'<pre><code data-linenos=true>var\n' +
+			'var\n' +
+			'</code></pre>',
 			function( err, data ) {
-				test.equal( data, ''
-					+ '<div class="highlightblock">'
-						+ '<table class="highlighttable">'
-							+ '<tr>'
-								+ '<td class="linenos">'
-									+ '<div class="linenodiv">'
-										+ '<pre>1\n'
-										+ '2</pre>'
-									+ '</div>'
-								+ '</td>'
-								+ '<td class="code">'
-									+ '<div class="highlight">'
-										+ '<pre><span class="n">var</span>\n'
-										+ '<span class="n">var</span>\n'
-										+ '</pre>'
-									+ '</div>\n'
-								+ '</td>'
-							+ '</tr>'
-						+ '</table>'
-					+ '</div>' );
+				test.equal( data, '' +
+					'<div class="highlightblock">' +
+						'<table class="highlighttable">' +
+							'<tr>' +
+								'<td class="linenos">' +
+									'<div class="linenodiv">' +
+										'<pre>1\n' +
+										'2</pre>' +
+									'</div>' +
+								'</td>' +
+								'<td class="code">' +
+									'<div class="highlight">' +
+										'<pre><span class="n">var</span>\n' +
+										'<span class="n">var</span>\n' +
+										'</pre>' +
+									'</div>\n' +
+								'</td>' +
+							'</tr>' +
+						'</table>' +
+					'</div>' );
 				test.done();
 			});
 	},
-	"linenos=true,linenostart=15": function( test ) {
+	"linenos=15": function( test ) {
 		test.expect( 1 );
-		pygmentize.file( "<pre><code data-linenos=true data-linenostart=15>var\nvar\n</code></pre>", function( err, data ) {
-			test.equal( data, ''
-				+ '<div class="highlightblock">'
-					+ '<table class="highlighttable">'
-						+ '<tr>'
-							+ '<td class="linenos">'
-								+ '<div class="linenodiv">'
-									+ '<pre>15\n'
-									+ '16</pre>'
-								+ '</div>'
-							+ '</td>'
-							+ '<td class="code">'
-								+ '<div class="highlight">'
-									+ '<pre><span class="n">var</span>\n'
-									+ '<span class="n">var</span>\n'
-									+ '</pre>'
-								+ '</div>\n'
-							+ '</td>'
-						+ '</tr>'
-					+ '</table>'
-				+ '</div>' );
+		pygmentize.file( "<pre><code data-linenos=15>var\nvar\n</code></pre>", function( err, data ) {
+			test.equal( data, '' +
+				'<div class="highlightblock">' +
+					'<table class="highlighttable">' +
+						'<tr>' +
+							'<td class="linenos">' +
+								'<div class="linenodiv">' +
+									'<pre>15\n' +
+									'16</pre>' +
+								'</div>' +
+							'</td>' +
+							'<td class="code">' +
+								'<div class="highlight">' +
+									'<pre><span class="n">var</span>\n' +
+									'<span class="n">var</span>\n' +
+									'</pre>' +
+								'</div>\n' +
+							'</td>' +
+						'</tr>' +
+					'</table>' +
+				'</div>' );
 			test.done();
 		});
 	}
