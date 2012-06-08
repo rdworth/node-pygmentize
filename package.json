@@ -1,7 +1,7 @@
 {
 	"name": "pygmentize",
 	"description": "Syntax highlighting with pygmentize.",
-	"version": "0.5.2",
+	"version": "0.5.3",
 	"homepage": "https://github.com/rdworth/node-pygmentize",
 	"author": {
 		"name": "Richard D. Worth",
@@ -29,7 +29,8 @@
 	},
 	"dependencies": {
 		"async": "latest",
-		"jsdom": "latest"
+		"jsdom": "latest",
+		"which": "latest"
 	},
 	"devDependencies": {
 		"grunt": "~0.3.9"
